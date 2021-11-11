@@ -1,1 +1,104 @@
+/* R.P.Raiyani */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background-color: #78909C;
+}
 
+/* Navigation Bar */
+
+.navbar{
+    background-color: #273746;
+    display: flex;
+    justify-content:space-between;
+    align-items:center;
+    padding: 0.5em;
+}
+
+.title{
+    font-size: 1.5em;
+    padding: 0 1em;
+    
+}
+.title>a{
+    color: #EFEBE9;
+    text-decoration: none;
+    display: inline-block;
+    transition-duration: 1s;
+}
+
+.navbar-links>ul{
+    display: flex;
+    list-style: none;
+}
+.navbar-links a{
+    color: white;
+    background: none;
+    font-size: 1em;
+    text-decoration:none;
+    padding: 1em 2em;
+    margin-left: 0.3em;
+    display: inline-block;
+    transition-duration: 0.3s;
+}
+.navbar-links a:hover{
+    border-radius: 2em;
+    background:radial-gradient(circle, lightgray 30%,#273746 85%);
+    color: black;
+}
+.title a:hover{
+    transform: scale(1.2); 
+}
+
+.toggle-btn{
+    width: 2em;
+    height: 1.5em;
+    padding: 2px;
+    display: none;
+    flex-direction:column;
+    justify-content: space-between;
+    transition-duration: 0.5s;
+}
+.toggle-btn:hover{
+    transform: scale(1.2);
+}
+
+.bar{
+   height: 4px; 
+   width: 100%;
+   background-color: white;
+}
+
+@media screen and (max-width: 650px) {
+    .title{
+        width: 100vw;
+        display: flex;
+        justify-content: space-between;
+    }
+    .navbar-links{
+        display: none;
+        width: 100%;
+    }
+
+    .navbar-links a{
+        display: block;
+    }
+    .navbar-links a:hover{
+        background: linear-gradient(to right,white,#273746);
+    }
+    .navbar-links ul{
+        display: flex;
+        flex-direction: column;
+    }
+    .toggle-btn{
+        display: flex;
+    }
+
+    .navbar{
+        display: flex;
+        flex-direction:column;
+    }
+}
